@@ -1,0 +1,2 @@
+flask-app:latest
+python:3.10

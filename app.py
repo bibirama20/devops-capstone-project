@@ -1,6 +1,8 @@
+from flask_talisman import Talisman
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
+Talisman(app)
 
 accounts = []
 counter = 1
