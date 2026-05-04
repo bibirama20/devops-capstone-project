@@ -1,0 +1,4 @@
+curl.exe -X POST "http://localhost:8080/accounts" -H "Content-Type: application/json" -d "{\"name\":\"Budi\",\"email\":\"budi@gmail.com\"}"
+
+Response:
+[{"email":"budi@gmail.com","id":1,"name":"Budi"}]

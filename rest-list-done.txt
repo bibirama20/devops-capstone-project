@@ -1,0 +1,2 @@
+curl http://localhost:8080/accounts
+[{"email":"budi@gmail.com","id":1,"name":"Budi"},{"email":"budi@gmail.com","id":2,"name":"Budi"}]

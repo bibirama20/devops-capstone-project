@@ -1,0 +1,5 @@
+Invoke-RestMethod -Uri "http://localhost:8080/accounts/1" -Method PUT -ContentType "application/json" -Body '{"name":"Budi Update"}'
+
+email          id name       
+-----          -- ----       
+budi@gmail.com  1 Budi Update
