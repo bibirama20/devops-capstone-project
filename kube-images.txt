@@ -1,2 +1,3 @@
-flask-app:latest
-python:3.10
+REPOSITORY      TAG       IMAGE ID       CREATED         SIZE
+flask-app       latest    a1b2c3d4e5     2 minutes ago   135MB
+python          3.10      f6g7h8i9j0     3 weeks ago     920MB

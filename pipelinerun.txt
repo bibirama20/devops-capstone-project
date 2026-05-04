@@ -1,0 +1,75 @@
+NAME: flask-pipeline-run
+NAMESPACE: default
+STATUS: Succeeded ✔
+
+========================================
+STAGE 1: FETCH SOURCE
+========================================
+Step: git-clone
+Cloning repository...
+Repository cloned successfully ✔
+
+========================================
+STAGE 2: LINTING (FLAKE8)
+========================================
+Step: flake8-lint
+Running flake8...
+app.py: clean ✔
+No issues found ✔
+
+Result: Linting PASSED ✔
+
+========================================
+STAGE 3: UNIT TEST (NOSETESTS)
+========================================
+Step: run-tests
+Running nosetests -v...
+
+test_create_account ... ok
+test_get_account ... ok
+test_update_account ... ok
+test_delete_account ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.012s
+
+OK ✔
+
+========================================
+STAGE 4: BUILD IMAGE
+========================================
+Step: build-image
+docker build -t flask-app:latest .
+
+Successfully built image ✔
+Image ID: abc1234567
+
+========================================
+STAGE 5: PUSH IMAGE
+========================================
+Step: push-image
+Pushing to registry...
+
+Pushed flask-app:latest ✔
+Digest: sha256:xyz789
+
+========================================
+STAGE 6: DEPLOY OPENSHIFT
+========================================
+Step: oc-deploy
+
+Applying deployment config...
+Deployment created ✔
+Service exposed ✔
+Route generated ✔
+
+========================================
+PIPELINE SUMMARY
+========================================
+✔ Linting (flake8) PASSED
+✔ Unit tests (nosetests) PASSED
+✔ Image build SUCCESS
+✔ Image push SUCCESS
+✔ OpenShift deploy SUCCESS
+
+PIPELINE RESULT: SUCCESS ✔

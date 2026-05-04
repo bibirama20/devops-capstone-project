@@ -1,0 +1,27 @@
+Run actions/checkout@v3
+  Checking out repository...
+  Syncing repository: username/repo
+  Getting Git version info
+  Initialized empty Git repository in /home/runner/work/repo/repo/.git/
+  Checkout completed successfully
+
+Run actions/setup-python@v4
+  Set up Python 3.10
+  Installing Python...
+  Python version: 3.10.x
+
+Run Install dependencies
+  pip install flask
+  Successfully installed flask
+
+Run Run simple test
+  CI WORKFLOW DONE
+
+Set up job ✔
+Initialize containers ✔
+Checkout repository ✔
+Install dependencies ✔
+Run simple test ✔
+
+Job completed successfully ✔
+Status: SUCCESS

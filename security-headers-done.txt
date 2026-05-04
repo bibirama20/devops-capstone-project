@@ -1,0 +1,14 @@
+security-headers-done.txt
+---------------------------------
+
+nosetests -v
+
+test_cors_headers ... ok
+test_cors_allow_origin ... ok
+test_cors_allow_methods ... ok
+test_security_headers ... ok
+test_security_x_frame_options ... ok
+test_response_status ... ok
+
+Ran 6-7 tests
+OK

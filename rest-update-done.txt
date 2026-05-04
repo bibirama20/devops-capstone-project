@@ -1,5 +1,10 @@
-Invoke-RestMethod -Uri "http://localhost:8080/accounts/1" -Method PUT -ContentType "application/json" -Body '{"name":"Budi Update"}'
+curl.exe -i -X PUT "http://localhost:8080/accounts/1" -H "Content-Type: application/json" -d "{\"name\":\"Budi Update\",\"email\":\"budi@gmail.com\"}"
 
-email          id name       
------          -- ----       
-budi@gmail.com  1 Budi Update
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Budi Update",
+  "email": "budi@gmail.com"
+}
